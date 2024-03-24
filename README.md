@@ -9,6 +9,7 @@ Saya Amelia Zalfa Julianti dengan NIM 2203999 mengerjakan Tugas Praktikum 2 mata
   3. **Metode setTable()** : Metode ini digunakan untuk mengisi tabel dengan data dari 'listmahasiswa' menggunakan DefaultTableModel.
   4. **Metode insertData(), updateData(), deleteData(), clearForm()** : Metode-metode ini digunakan untuk menambah, mengubah, menghapus data, dan membersihkan formulir.
   5. **Metode populateList()**: Metode ini digunakan untuk mengisi 'listMahasiswa' dengan data mahasiswa awal.
+  6. **Koneksi Database** : Program ini berinteraksi dengan database untuk menyimpan data mahasiswa. Kelas 'Database' digunakan untuk menjalankan query SQL seperti SELECT, INSERT, UPDATE, dan DELETE ke database.
   
 ## Alur Program
 User akan melihat antarmuka GUI yang berisi tabel untuk menampilkan data mahasiswa dan beberapa kompnen input seperti JTextField dan JComboBox untuk menambah, mengubah, dan menghapus data mahasiswa.
