@@ -10,6 +10,13 @@ Saya Amelia Zalfa Julianti dengan NIM 2203999 mengerjakan Tugas Praktikum 2 mata
   4. **Metode insertData(), updateData(), deleteData(), clearForm()** : Metode-metode ini digunakan untuk menambah, mengubah, menghapus data, dan membersihkan formulir.
   5. **Metode populateList()**: Metode ini digunakan untuk mengisi 'listMahasiswa' dengan data mahasiswa awal.
   6. **Koneksi Database** : Program ini berinteraksi dengan database untuk menyimpan data mahasiswa. Kelas 'Database' digunakan untuk menjalankan query SQL seperti SELECT, INSERT, UPDATE, dan DELETE ke database.
+     - **Import paket 'java.sql.** : berisi kelas-kelas yang mendukung JDBC (Java Database Connectivity).
+     - **Deklarasi Variabel** :  Variabel connection bertipe Connection digunakan untuk menyimpan objek koneksi ke database. Variabel statement bertipe Statement digunakan untuk membuat objek statement SQL yang akan digunakan untuk mengeksekusi query.
+     - **Konstruktor** : Konstruktor kelas Database bertujuan untuk menginisialisasi koneksi ke database. Di dalamnya, **DriverManager.getConnection()** digunakan untuk mendapatkan objek koneksi ke database MySQL dengan mengambil URL koneksi, nama pengguna, dan kata sandi sebagai parameter. Objek **Statement** kemudian dibuat dengan menggunakan metode **createStatement()** dari objek **Connection**.
+     - **Metode 'selectQuery()'** : Metode ini menerima sebuah string sql yang berisi pernyataan SELECT dan kemudian mengeksekusi pernyataan tersebut menggunakan objek **Statement**. Hasil dari eksekusi kueri disimpan dalam objek **ResultSet**, yang kemudian dikembalikan oleh metode.
+     - **Metode insertUpdateDeleteQuery()**: Metode ini menerima sebuah string sql yang berisi pernyataan INSERT, UPDATE, atau DELETE, dan kemudian mengeksekusi pernyataan tersebut menggunakan objek Statement. Metode ini mengembalikan jumlah baris yang terpengaruh oleh operasi tersebut.
+     - **Getter getStatement()**: Metode ini mengembalikan objek Statement yang digunakan untuk mengeksekusi qiey SQL.
+     - **Penanganan Exception**: Dalam kedua metode **selectQuery()** dan **insertUpdateDeleteQuery()**, exception SQLException ditangkap dan dilemparkan kembali sebagai RuntimeException. Ini adalah pendekatan sederhana yang memungkinkan untuk menangani kesalahan koneksi atau eksekusi query secara global.
   
 ## Alur Program
 User akan melihat antarmuka GUI yang berisi tabel untuk menampilkan data mahasiswa dan beberapa kompnen input seperti JTextField dan JComboBox untuk menambah, mengubah, dan menghapus data mahasiswa.
